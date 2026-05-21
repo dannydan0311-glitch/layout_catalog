@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+  font-weight: 500;
+  display: flex;
+  box-shadow: 0 2px 4px #0000000d;
+}
+
+.logo {
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.header__list {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.header__link {
+  white-space: nowrap;
+  color: #060b35;
+  align-items: center;
+  height: 60px;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-flex;
+  position: relative;
+}
+
+.header__link:hover {
+  color: #00acdc;
+}
+
+.header__list li:not(:last-child) .header__link {
+  margin-right: 20px;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.header__link.is-active:after {
+  content: "";
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.catalog {
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  gap: 46px 48px;
+  padding: 50px 40px;
+  display: grid;
+}
+
+.catalog__card {
+  pointer-events: auto;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  padding: 32px 16px 16px;
+  transition: transform .3s;
+  position: relative;
+}
+
+@media (width <= 487px) {
+  .catalog {
+    grid-template-columns: repeat(1, 200px);
+  }
+}
+
+@media (width >= 488px) and (width <= 767px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (width >= 768px) and (width <= 1023px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (width >= 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
+
+.catalog__image {
+  background-image: url("imac.d0e0225a.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto;
+}
+
+.catalog__content {
+  margin-top: 40px;
+}
+
+.catalog__title {
+  color: #060b35;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  transition: transform .3s, color .3s;
+}
+
+.catalog__code {
+  color: #616070;
+  margin: 4px 0 0;
+  padding: 0;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.catalog__rating {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  display: flex;
+}
+
+.catalog__stars {
+  flex-direction: row;
+  gap: 4px;
+  display: flex;
+}
+
+.catalog__star {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.catalog__star:not(:last-child) {
+  background-image: url("star-active.2be54011.svg");
+}
+
+.catalog__star:last-child {
+  background-image: url("star.fa806e3c.svg");
+}
+
+.catalog__reviews {
+  color: #060b35;
+  text-align: right;
+  width: 53px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.catalog__price {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  display: flex;
+}
+
+.catalog__price-title {
+  color: #616070;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.catalog__price-value {
+  color: #060b35;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.catalog__button {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: none;
+  transition: background-color .3s, color .3s;
+  display: flex;
+}
+
+.catalog__card:hover {
+  z-index: 10;
+  transform: scale(1.2);
+}
+
+.catalog__card:hover .catalog__title {
+  color: #34568b;
+}
+
+.catalog__button:hover {
+  color: #00acdc;
+  background-color: #fff;
+}
+/*# sourceMappingURL=index.971c2ea4.css.map */
