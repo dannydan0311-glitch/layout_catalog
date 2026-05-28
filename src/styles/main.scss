@@ -111,7 +111,7 @@ p {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
-  transition: transform 0.3s ease;
+  transition: transform 300ms ease;
   position: relative;
   pointer-events: auto;
 }
@@ -141,13 +141,9 @@ p {
 }
 
 .catalog__image {
-  margin: 0 auto;
-
-  background-image: url(../images/imac.jpeg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
+  display: block;
+  margin: 0 auto 40px;
+  
   width: 160px;
   height: 134px;
 }
@@ -164,7 +160,7 @@ p {
   line-height: 18px;
   color: $text-main-accent;
 
-  transition: color 0.3s ease;
+  transition: color 300ms ease;
 }
 
 .catalog__code {
@@ -258,8 +254,8 @@ p {
   align-items: center;
 
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
 .catalog__card:hover {
